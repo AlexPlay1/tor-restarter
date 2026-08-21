@@ -7,7 +7,7 @@ RUN pip install --disable-pip-version-check --root-user-action ignore -r require
 FROM gcr.io/distroless/python3:nonroot
 COPY --from=builder /packages /packages
 WORKDIR /app
-COPY app.py /app
+COPY . /app
 ENV PYTHONPATH=/packages
 
 EXPOSE 3000
