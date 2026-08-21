@@ -1,8 +1,8 @@
 from flask import Flask, render_template, request, jsonify
 import docker
 import requests
-import os
 import datetime
+import os
 
 app = Flask(__name__)
 client = docker.from_env()
