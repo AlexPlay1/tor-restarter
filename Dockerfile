@@ -5,7 +5,7 @@ RUN --mount=type=cache,target=/root/.cache/pip \
   pip install --disable-pip-version-check --root-user-action ignore -r requirements.txt --target /packages
 
 # Runtime stage
-FROM gcr.io/distroless/python3:nonroot@sha256:8ee214843129f43e2ebf5e0ca9f2e4e6d8292143d1b8a6787f169b5898578884
+FROM gcr.io/distroless/python3:nonroot@sha256:774595d652a294b54c9bd575b2d9fdd1a4b47547dc17b8bfa4c0e953c64855b3
 COPY --from=builder /packages /packages
 WORKDIR /app
 COPY . /app
